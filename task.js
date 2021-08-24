@@ -128,7 +128,7 @@ var debrief = {
       return "<p>あなたの正答率は，<strong>"+accuracy+"%</strong>でした。</p> " +
       "<p>色と単語が一致していた時にボタンを押すまでにかかる時間の平均は， <strong>" + congruent_rt + "ms</strong>でした。</p>"+
       "<p>色と単語が不一致だった時にボタンを押すまでにかかる時間の平均は， <strong>" + incongruent_rt + "ms</strong>でした。</p>"+
-      "<p>キーボードのキーをどれか押すと画面に結果の記録が表示されます。ブラウザを閉じて終了してください。ご参加ありがとうございました。</p>";
+      "<p>キーボードのキーをどれか押すと結果を保存して終了します。その後，ブラウザを閉じて終了してください。ご参加ありがとうございました。</p>";
     }
 };
 
@@ -142,9 +142,3 @@ var timeline = [];
   timeline.push(instructions);
   timeline.push(stroop);
   timeline.push(debrief);
-  jsPsych.init({
-      timeline: timeline,
-      on_finish: function() {
-       jsPsych.data.displayData();
-      }
-  });
